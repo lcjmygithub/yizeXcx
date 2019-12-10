@@ -1,0 +1,29 @@
+/* pages/upDetail/index.wxss */
+Page{
+  background: #f5f5f5;
+}
+.upDetailCon {
+  background: #fff;
+  margin-top:15rpx;
+  padding:0 30rpx;
+}
+/* .detailLists {
+
+} */
+.detailList {
+  line-height: 128rpx;
+  border-bottom:2rpx solid #f5f5f5;
+}
+.detailList>text:first-child{
+  color:#666;
+  font-size:30rpx;
+  font-weight: bold;
+}
+.detailList>text:last-child{
+  color:#000;
+  font-size:30rpx;
+  font-weight: bold;
+}
+/* .remark {
+
+} */

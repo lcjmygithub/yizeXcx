@@ -1,0 +1,24 @@
+<!--pages/myTeam/index.wxml-->
+<view class='teams'  wx:if="{{teamLists.length}}">
+  <view class='people' wx:for="{{teamLists}}">
+    <view class='leftPhoto'>
+      <image src='{{item.headimgurl}}'></image>
+    </view>
+    <view class='right'>
+      <view class='name'>{{item.nickname}}</view>
+      <view class='money'>
+        <view>消费金额 : {{item.cash || 0}}元</view>
+        <navigator url="../../pages/myTeam/index?state=2&openid={{item.openid}}" hover-class="navigator-hover" wx:if="{{item.team}}">
+          <view>团队 : {{item.team || 0}} 人
+            <image src='../../img/arrghtImg.png'></image>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>
+<view style="height:100vh;background:#fff;padding-top:60rpx" wx:if="{{!teamLists.length}}">
+  <view style='padding-bottom:100rpx'>
+    <image src='../../img/noList.png' style='width:40%;height:300rpx;margin-left:30%;margin-top:100rpx'></image>
+  </view>
+</view>

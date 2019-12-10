@@ -1,0 +1,211 @@
+<!--pages/taskDetail/taskDetail.wxml-->
+<wxs src="../../filter/filter.wxs" module="filter" />
+<!-- 外呼名称 -->
+<!-- <scroll-view wx:if="{{cmpid}}" class="container" hidden="{{isload}}" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" enable-back-to-top="true" scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}" scroll-y="true"> -->
+<view>
+  <view class='topContainar'>
+    <text>{{detailList.taskname}}</text>
+    <image src='../../img/cancal.png' wx:if="{{detailList.state == 4}}"></image>
+    <image src='../../img/runing.png' catchtap='changeTask' wx:if="{{detailList.callflag == 1 && detailList.state != 4}}" data-taskid="{{detailList.taskid}}" data-callflag="{{detailList.callflag}}"></image>
+    <image src='../../img/stop.png' catchtap='changeTask' wx:if="{{!detailList.callflag || (detailList.callflag == 2 && detailList.state != 4) }}" data-taskid="{{detailList.taskid}}" data-callflag="{{detailList.callflag}}"></image>
+    <view>创建时间 :
+      <text>{{detailList.createtime}}</text>
+    </view>
+  </view>
+
+  <!-- 话术 -->
+  <view class='bookCon'>
+    <view>话术 :
+      <text>{{detailList.nickname}}</text>
+    </view>
+    <view style='display:flex'>
+      <view style='font-size:26rpx;color:#666;flex:2'>外呼时间 : </view>
+      <!-- <view>
+        <text wx:for="{{detailList.saletaskCalltime}}" style='margin-right:10rpx;width:50%'>{{item.startime}}-{{item.endtime}}</text>
+      </view> -->
+      <view style='display:flex;flex-wrap:wrap;margin-top:-10rpx;flex:9' wx:if="{{detailList.saletaskCalltime.length}}">
+        <view wx:for="{{detailList.saletaskCalltime}}" style='margin:0 20rpx 0 20rpx;color:#0475f0'>{{item.startime}}-{{item.endtime}}</view>
+      </view>
+
+      <view style='margin-top:-10rpx;flex:9' wx:if="{{!detailList.saletaskCalltime.length}}">
+        <view style='margin:0 20rpx 0 0rpx;color:#0475f0'>08:30:00-20:30:00</view>
+      </view>
+    </view>
+    <view>机器人个数 :
+      <text>{{detailList.occurs}}</text>
+    </view>
+    <view>重呼 :
+      <text wx:if="{{detailList.recalltime}}">重呼一次</text>
+      <text wx:if="{{!detailList.recalltime}}">不重呼</text>
+    </view>
+  </view>
+
+  <!-- 外呼情况 -->
+  <view class='detailCall'>
+    <view>
+      <view>外呼总量</view>
+      <view>{{detailList.data.count || 0}}
+        <text>个</text>
+      </view>
+    </view>
+    <view>
+      <view>接听总量</view>
+      <view>{{detailList.data.hasJoin || 0}}
+        <text>个</text>
+      </view>
+    </view>
+    <view>
+      <view>意向客户</view>
+      <view>{{detailList.data.iclevelCount || 0}}
+        <text>个</text>
+      </view>
+    </view>
+    <view>
+      <view>接通率</view>
+      <view>{{detailList.data.rate || 0}}
+        <text>%</text>
+      </view>
+    </view>
+    <view>
+      <view>A级</view>
+      <view>{{detailList.iclevelCountList[0].count || 0}}
+        <text>个</text>
+      </view>
+    </view>
+    <view>
+      <view>B级</view>
+      <view>{{detailList.iclevelCountList[1].count || 0}}
+        <text>个</text>
+      </view>
+    </view>
+    <view>
+      <view>C级</view>
+      <view>{{detailList.iclevelCountList[2].count || 0}}
+        <text>个</text>
+      </view>
+    </view>
+    <view>
+      <view>D级</view>
+      <view>{{detailList.iclevelCountList[3].count || 0}}
+        <text>个</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 通话记录 -->
+  <view class='callList'>
+
+    <view style="background:#f8f8f9;line-height:34rpx;">
+      <image src='../../img/callList.png' style='width:20rpx;height:22rpx;margin:0 10rpx 0 10rpx'></image>
+      <text>通话记录</text>
+    </view>
+
+    <view class='callTitle'>
+      <view>
+        <picker bindchange="bindPickerChange" value="{{index1}}" range="{{array}}">
+          <view class="picker">
+            <view wx:if="{{!isState}}">
+              <text style='font-size:26rpx'>状态 </text>
+              <image style="width:20rpx;height:10rpx;margin-top:30rpx" src='../../img/down.png'></image>
+            </view>
+            <view wx:if="{{isState}}">
+              <text style='font-size:26rpx;color:#666;'>{{array[index1]}} </text>
+              <image style="width:20rpx;height:10rpx;margin-top:30rpx" src='../../img/down.png'></image>
+            </view>
+
+          </view>
+        </picker>
+      </view>
+      <view>
+        <picker bindchange="bindChangecase" value="{{index}}" range="{{objectArrayTest}}" range-key="{{'iclevelname'}}" data-taskid="{{iclevelid}}">
+          <view class="picker">
+            <view wx:if="{{!isTime}}">
+              <!-- <text style='font-size:30rpx'>状态 </text>
+              <image style="width:20rpx;height:10rpx;margin-top:30rpx" src='../../img/down.png'></image> -->
+              <text style='font-size:26rpx'>意向 </text>
+              <image style="width:20rpx;height:10rpx;margin-top:30rpx" src='../../img/down.png'></image>
+            </view>
+            <view wx:if="{{isTime}}">
+              <text style='font-size:26rpx;width:56rpx;color:#666;'>{{objectArrayTest[index].iclevelname}} </text>
+              <image style="width:20rpx;height:10rpx;margin-top:30rpx" src='../../img/down.png'></image>
+            </view>
+            <!-- <view wx:if="{{isState}}" style='font-size:30rpx;margin-top:10rpx'>{{arrayTest[iclevelid]}}</view> -->
+          </view>
+        </picker>
+        <!-- <text>意向 </text>
+        <image style="width:20rpx;height:10rpx;margin-top:30rpx" src='../../img/down.png'></image> -->
+      </view>
+      <view>
+        <!-- <picker bindchange="bindLongChange" value="{{index}}" range="{{array}}">
+          <view class="picker"> -->
+        <view wx:if="{{!isLong}}" bindtap="bindLongChange">
+          <text style='font-size:26rpx'>时长 </text>
+          <image style="width:20rpx;height:10rpx;margin-top:30rpx" src='../../img/down.png'></image>
+        </view>
+        <view wx:if="{{isLong}}" bindtap="bindLongChange">
+          <view class="section" wx:if="{{maxCallTime}}">
+            {{minCallTime || 0}}s
+            <text> - </text> {{maxCallTime}}<text wx:if="{{maxCallTime}}">s</text>
+              <image style="width:20rpx;height:10rpx;margin-top:15rpx;margin-left:8rpx" src='../../img/down.png'></image>
+          </view>
+          <view class="section" wx:if="{{!maxCallTime}}">
+            最小时长: {{minCallTime}}s
+              <image style="width:20rpx;height:10rpx;margin-top:15rpx;margin-left:8rpx" src='../../img/down.png'></image>
+          </view>
+        </view>
+
+      </view>
+      <!-- </picker>
+      </view> -->
+    </view>
+
+    <!-- 通话记录列表 -->
+    <view class="number-block" id="callRecordMsg">
+      <view class="number" wx:for="{{callAllList}}" wx:key="index" data-index="{{index}}" bindtap='customerDetails' data-saleid="{{item.saleid}}" data-isRead="{{item.isread}}">
+        <view class="number-left">
+          <view class="number-top">
+            <view class="number-phone">{{item.mobilephone}}</view>
+            <view class="_dot" hidden='{{item.isread}}'>{{item.isread}}</view>
+          </view>
+          <view class="nearerTime">
+            {{item.createtime}}
+            <text>{{item.calltime?'通话'+filter.formatDate(item.calltime):'未接通'}}</text>
+          </view>
+        </view>
+        <view class="number-right">
+          <view class="iclevelname">{{item. iclevelname}}</view>
+        </view>
+      </view>
+      <view wx:if="{{!callAllList.length}}" style='padding-bottom:100rpx'>
+        <image src='../../img/noList.png' style='width:40%;height:300rpx;margin-left:30%;margin-top:100rpx'></image>
+      </view>
+    </view>
+  </view>
+</view>
+<view class='toast-box' wx:if="{{isShowTime}}">
+  <view class='toastbg'></view>
+  <view class='showToast'>
+    <view class='toast-title'>
+      <text>请输入筛选时间</text>
+    </view>
+    <view class='toast-main'>
+      <!-- <view class='toast-input'> -->
+      <!-- <input placeholder='请输入并发数' bindinput='setValues' value="{{setValue}}" data-name='stuEidtName'></input> -->
+      <view class="section" style="padding:40rpx 40rpx">
+        <input placeholder="最小时长" bindinput='minLong' bindconfirm='searchTime' style="color:#666;height:4.5vh" type="number"/>
+        <text> - </text>
+        <input placeholder="最大时长" bindinput='maxLong' bindconfirm="searchTime" style="color:#666;height:4.5vh" type="number"/>
+      </view>
+      <!-- </view> -->
+    </view>
+    <view class='toast-button'>
+      <view class='button1'>
+        <view catchtap='cancel'>取消</view>
+      </view>
+      <view class='button2'>
+        <view catchtap='confirm'>确定</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- </scroll-view> -->

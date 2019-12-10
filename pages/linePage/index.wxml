@@ -1,0 +1,63 @@
+<!--pages/linePage/index.wxml-->
+<view>
+  <view class="one">
+    <view></view>
+    <view>线路管理</view>
+  </view>
+
+  <view class="boduy" wx:if="{{listData.length}}">
+    <view class="boleft">
+      <view class="caozuo">操作</view>
+      <block wx:for='{{listData}}' wx:key=''>
+      <!-- hasLine -->
+        <view class="bian" wx:if="{{item.hasLine}}" style="color:#ff3040;" bindtap="cacalLine" data-phone="{{item.virtual_phone}}">取消该线路</view>
+        <view class="bian" wx:else style="color:#0475f0;" data-phone="{{item.virtual_phone}}" bindtap="useLine">使用该线路</view>
+         <!-- <view class="bian">取消该线路</view> -->
+      </block>
+    </view>
+    <view class="borig">
+      <scroll-view scroll-x="true">
+        <view class="scroll-x">
+          <view class="tr bg-w">
+            <view class="th" style="width:230rpx">线路名称</view>
+            <view class="th">价格(元)</view>
+            <view class="th ">归属地</view>
+            <view class="th">盲区</view>
+            <view class="th ">可用数</view>
+          </view>
+
+        </view>
+        <view class="scroll-x">
+          <block wx:for="{{listData}}" wx:key="{{code}}">
+            <view class="tr" wx:if="{{index % 2 == 0}}">
+              <view class="td" style="width:230rpx">{{item.companyname}}</view>
+              <view class="td">{{item.cus_fee}}</view>
+              <view class="td">{{item.call_area}}</view>
+              <view class="td">{{item.remark}}</view>
+              <view class="td">{{item.useOccurs || 0}}/<text style="color:#ff3040">{{item.occurs || 0}}</text></view>
+              <!-- <view class="td">111</view>
+<view class="th ">111</view> -->
+              <!-- <view class="td fixed1" style="color:#FF3040">取消该线路</view> -->
+
+            </view>
+            <view class="tr" wx:else>
+              <view class="td" style="width:230rpx">{{item.companyname}}</view>
+              <view class="td">{{item.cus_fee}}</view>
+              <view class="td">{{item.call_area}}</view>
+              <view class="td">{{item.remark}}</view>
+              <view class="td">{{item.useOccurs || 0}}/<text style="color:#ff3040">{{item.occurs || 0}}</text></view>
+              <!-- <view class="td">111</view>
+<view class="th ">111</view> -->
+              <!-- <view class="td fixed1" style="color:pick" fixed>使用该线路</view> -->
+            </view>
+          </block>
+        </view>
+      </scroll-view>
+    </view>
+  </view>
+<view style="height:100vh;background:#fff;padding-top:60rpx" wx:if="{{!listData.length}}">
+  <view wx:if="{{!upLists.length}}">
+    <image src='../../img/noList.png' style='width:40%;height:300rpx;margin-left:30%;margin-top:100rpx'></image>
+  </view>
+</view>
+</view>

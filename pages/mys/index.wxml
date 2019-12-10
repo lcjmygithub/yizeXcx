@@ -1,0 +1,77 @@
+<!--pages/logs/index.wxml-->
+<!-- 个人中心 -->
+<view class='mysCon'>
+  <!-- <view>
+    <image src='{{userInfo.avatarUrl}}'></image>
+  </view> -->
+  <view>
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <view>
+    <view>
+      <open-data type="userNickName"></open-data>
+    </view>
+    <view>{{phone}}</view>
+    <view>到期时间:
+      <text>{{etime}}</text>
+    </view>
+  </view>
+</view>
+
+<view class='myLists'>
+  <navigator url="/pages/rechgeMys/index" hover-class="none">
+    <view class='myLis' style="border-bottom:1rpx solid #e9e1ec;">
+      <view>
+        <image src='../../img/linImg.png' style='margin-right:30rpx'></image>
+        <text>账户余额</text>
+      </view>
+      <view style="margin-left:200rpx;color:#0978f0;font-weight:700">{{balance || 0}}元</view>
+      <image style="width:15rpx;margin-top:10rpx" src='../../img/arrow_right3.png'></image>
+    </view>
+  </navigator>
+  <view class='myLis'>
+    <button open-type="contact">
+      <view>
+        <image src='../../img/kefu.png' style='margin-right:30rpx' class='activre'></image>
+        <text>联系客服</text>
+      </view>
+      <view>
+        <image style="width:15rpx" src='../../img/arrow_right3.png'></image>
+      </view>
+    </button>
+  </view>
+  <navigator url="{{ponerUrl}}" hover-class="none">
+    <view class='myLis' style="border-bottom:1rpx solid #e9e1ec;">
+      <view>
+        <image src='../../img/partner.png' style='margin-right:15rpx;width:50rpx'></image>
+        <text>{{text}}</text>
+      </view>
+      <view>
+        <image style="width:15rpx" src='../../img/arrow_right3.png'></image>
+      </view>
+    </view>
+  </navigator>
+  <!-- <web-view src="https://www.baidu.com/">跳转</web-view> -->
+  <navigator url="/pages/linePage/index" hover-class="none">
+    <view class='myLis' style="border-bottom:1rpx solid #e9e1ec;">
+      <view>
+        <image src='../../img/yue.png' style='margin-right:30rpx'></image>
+        <text>线路管理</text>
+      </view>
+      <view>
+        <image style="width:15rpx" src='../../img/arrow_right3.png'></image>
+      </view>
+    </view>
+  </navigator>
+    <navigator url="/pages/openPay/index/index" hover-class="none">
+    <view class='myLis'>
+      <view>
+        <image src='../../img/yue.png' style='margin-right:30rpx'></image>
+        <text>开户</text>
+      </view>
+      <view>
+        <image style="width:15rpx" src='../../img/arrow_right3.png'></image>
+      </view>
+    </view>
+  </navigator>
+</view>

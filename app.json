@@ -1,0 +1,60 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/mys/index",
+    "pages/task/task",
+    "pages/taskDetail/taskDetail",
+    "pages/callPages/index",
+    "pages/partner/index",
+    "pages/myearnings/index",
+    "pages/recharge/index",
+    "pages/upList/index",
+    "pages/upDetail/index",
+    "pages/myTeam/index",
+    "pages/erweima/index",
+    "pages/earningDetail/index",
+    "pages/joinPeople/index",
+    "pages/linePage/index",
+    "pages/rechgeMys/index",
+    "pages/openPay/index/index"
+  ],
+  "window": {
+    "navigationBarTitleText": "weChat",
+    "backgroundColor": "#fff"
+  },
+  "tabBar": {
+    "color": "#808080",
+    "selectedColor": "#0978F0",
+    "backgroundColor": "#fff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "img/homePage.png",
+        "selectedIconPath": "img/homePageState.png"
+      },
+      {
+        "pagePath": "pages/task/task",
+        "text": "任务",
+        "iconPath": "img/kehuState.png",
+        "selectedIconPath": "img/kehu.png"
+      },
+      {
+        "pagePath": "pages/mys/index",
+        "text": "我的",
+        "iconPath": "img/mys.png",
+        "selectedIconPath": "img/mysState.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "navigateToMiniProgramAppIdList": [
+    "wxe5f52902cf4de896"
+  ],
+  "sitemapLocation": "sitemap.json"
+}

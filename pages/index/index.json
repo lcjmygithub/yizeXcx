@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "首页",
+  "navigationBarBackgroundColor": "#0084ff",
+    "usingComponents": {
+      "ec-canvas": "../../ec-canvas/ec-canvas"
+    }
+}

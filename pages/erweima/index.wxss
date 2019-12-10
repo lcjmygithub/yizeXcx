@@ -1,0 +1,29 @@
+/* pages/erweima/index.wxss */
+
+.viewcanvas {
+  z-index: 1;
+  margin-top:-8vh;
+}
+
+.oneButton {
+  z-index: 99999;
+  position: fixed;
+  right: 50rpx;
+  top: 50rpx;
+  background: #fff;
+  /* color:#fff; */
+  opacity: 0.3;
+  padding: 10rpx 30rpx;
+  border-radius: 30rpx;
+}
+
+.twoButton {
+  z-index: 99999;
+  position: fixed;
+  right: 60rpx;
+  bottom: 30rpx;
+  color: #073d96;
+  background: #fff;
+  padding: 10rpx 60rpx;
+  border-radius: 10rpx;
+}

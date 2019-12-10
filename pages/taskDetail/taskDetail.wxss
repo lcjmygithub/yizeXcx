@@ -1,0 +1,320 @@
+/* pages/taskDetail/taskDetail.wxss */
+
+.topContainar {
+  margin: 30rpx 40rpx;
+  padding-bottom: 40rpx;
+  border-bottom: 2rpx solid #e1e1e1;
+}
+
+.topContainar image {
+  width: 100rpx;
+  height: 39rpx;
+  float: right;
+}
+
+.topContainar text {
+  color: #333;
+  font-weight: bold;
+}
+
+.topContainar view {
+  margin-top: 20rpx;
+  color: #666;
+  font-size: 26rpx;
+  font-weight: bold;
+}
+
+.topContainar view text {
+  color: #9d9d9d;
+}
+
+.bookCon {
+  margin: 0 40rpx;
+}
+
+.bookCon view {
+  color: #666;
+  font-weight: bold;
+  font-size: 26rpx;
+  padding: 10rpx 0;
+}
+
+.bookCon view text {
+  color: #0475f0;
+}
+
+.detailCall {
+  display: flex;
+  padding: 20rpx 0 20rpx 0;
+  margin: 30rpx 40rpx;
+  flex-wrap: wrap;
+  border-top: 2rpx solid #f5f5f5;
+  /* border-bottom:2rpx solid #f5f5f5; */
+}
+
+.detailCall>view {
+  width: 24%;
+  margin: 30rpx 0;
+  text-align: center;
+  border-right: 2rpx solid #f5f5f5;
+}
+
+.detailCall>view> view:first-child {
+  font-size: 24rpx;
+  color: #999;
+  margin-bottom: 10rpx;
+}
+
+.detailCall>view> view:last-child {
+  font-size: 34rpx;
+  color: #0475f0;
+  font-weight: bold;
+}
+
+.detailCall>view> view:last-child text {
+  font-size: 26rpx;
+}
+
+.callList {
+  /* padding:0 40rpx; */
+}
+
+.callList>view:first-child {
+  background: #f5f5f5;
+  padding: 20rpx;
+}
+
+.callList> view >text {
+  color: #0c0c0c;
+  font-weight: bold;
+  font-size: 26rpx;
+}
+
+.callList .callTitle {
+  padding: 20rpx 40rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.callDeLiAll {
+  padding: 30rpx 40rpx;
+}
+
+.callDeLi view:first-child {
+  display: flex;
+  justify-content: space-between;
+}
+
+.callDeLi view:first-child view:first-child {
+}
+
+.number-block {
+  width: 100%;
+  background: #fff;
+}
+
+.number {
+  padding: 40rpx 20rpx;
+  margin: 0 30rpx;
+  display: flex;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.tips-right image {
+  width: 23rpx;
+  height: 19rpx;
+}
+
+.number-left {
+  flex: 5;
+}
+
+.number-right {
+  flex: 2;
+  text-align: right;
+  position: relative;
+}
+
+.number-right>.iclevelname {
+  height: 42rpx;
+  line-height: 42rpx;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto 0;
+  font-size: 30rpx;
+  font-family: PingFang-SC-Bold;
+  font-weight: 700;
+  color: #0475f0;
+  margin-top:0rpx;
+}
+
+.number-right>.rightIcon {
+  width: 42rpx;
+  height: 42rpx;
+  line-height: 42rpx;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto 0;
+  border: 1px solid #e1e1e1;
+  border-radius: 50%;
+  text-align: center;
+}
+
+.isread {
+  font-size: 28rpx;
+  color: red;
+  margin-left: 10rpx;
+}
+
+view.isread1 {
+  color: #6c6c6c;
+}
+
+.number-right image {
+  width: 10rpx;
+  height: 20rpx;
+  margin: auto 0;
+}
+
+.number-top {
+  margin-bottom: 13rpx;
+  display: flex;
+}
+
+.callRecord {
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  color: #6c6c6c;
+  background: rgba(243, 243, 243, 1);
+  font-size: 28rpx;
+  font-family: PingFang-SC-Bold;
+  font-weight: bold;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+.number-top .number-phone {
+  font-size: 36rpx;
+  color: #333;
+  margin-right: 15rpx;
+  font-weight: bold;
+}
+
+.number-top .number-type {
+  font-size: 28rpx;
+  line-height: 21rpx;
+}
+
+.nearerTime {
+  font-size: 28rpx;
+  color: #999;
+}
+
+._dot {
+  width: 16rpx;
+  height: 16rpx;
+  border-radius: 50%;
+  background-color: red;
+  margin-top: -2rpx;
+}
+
+.number1 {
+  color: #1a1893;
+}
+
+.section {
+  display: flex;
+  /* width: 310rpx; */
+  font-size: 26rpx;
+  margin-top:8rpx;
+}
+
+.section input {
+  border: 1px solid #ccc;
+  /* padding: 3rpx 20rpx; */
+  border-radius: 10rpx;
+}
+
+.section input:first-child {
+  margin-right: 10rpx;
+}
+
+.section input:last-child {
+  margin-left: 10rpx;
+}
+.toast-box {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+ 
+.toastbg {
+    opacity: 0.2;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+}
+ 
+.showToast {
+    position: absolute;
+    opacity: 1;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 40%;
+    border-radius: 10rpx
+}
+ 
+.toast-title {
+    padding-left: 5%;
+    background-color: #fff;
+    border-bottom:1px solid #ccc;
+    color: #000;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-top-right-radius: 10rpx;
+    border-top-left-radius: 10rpx;
+}
+ 
+.toast-main {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: white;
+    text-align: center;
+}
+ 
+.toast-input {
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid #ddd;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+ 
+.toast-button {
+    display: flex;
+    background: #fff;
+    text-align: center;
+    line-height:83rpx;
+    background: #f5f5f5;
+}
+.button1 {
+    width: 50%;
+    font-size:32rpx;
+    border-right:1rpx solid #ddd;
+}
+ 
+.button2 {
+    width: 50%;
+        font-size:32rpx;
+}

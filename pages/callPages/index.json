@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "通话记录",
+  "navigationBarBackgroundColor": "#fff",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+   "wxzx-slider": "../../zcomponents/wxzx-slider/wxzx-slider"
+  }
+}

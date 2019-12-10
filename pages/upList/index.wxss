@@ -1,0 +1,55 @@
+/* pages/upList/index.wxss */
+Page {
+  background: #f5f5f5;
+}
+.listContainer {
+  /* padding:0 30rpx; */
+}
+.title {
+  color:#6c6c6c;
+  font-size:28rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+   padding:0 30rpx;
+}
+.lists {
+  background: #fff;
+   padding:0 30rpx;
+}
+.list {
+  display:flex;
+  justify-content: space-between;
+  line-height: 128rpx;
+  border-bottom:2rpx solid #f5f5f5;
+}
+#colorBlue{
+  color:#0084ff;
+}
+#colorred{
+  color:#ff3040;
+}
+.listLeft text {
+  margin-right:20rpx;
+  font-size:50rpx;
+}
+.listLeft text:nth-child(2){
+  margin-right:20rpx;
+  font-size:36rpx;
+  font-weight: bold;
+}
+.listLeft text:last-child{
+  margin-right:20rpx;
+  font-size:20rpx;
+  margin-left:-16rpx;
+  font-weight: bold;
+}
+.listRight image {
+  width:12rpx;
+  height:22rpx;
+  margin-left:20rpx;
+  margin-top:5rpx;
+}
+.listRight text {
+  color:#666;
+  font-size:30rpx;
+}

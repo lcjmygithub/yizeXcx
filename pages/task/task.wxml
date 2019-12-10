@@ -1,0 +1,78 @@
+<!--pages/task/task.wxml-->
+<!-- <button open-type="openSetting" style='background:#fff;border:none'>打开授权设置页</button> -->
+<view class='topCon'>
+  <view>
+
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+      <view class="picker">
+        <view wx:if="{{!isState}}">
+          <text style='font-size:26rpx'>状态 </text>
+          <image style="width:20rpx;height:10rpx;margin-top:30rpx" src='../../img/down.png'></image>
+        </view>
+        <!-- 当前选择：{{array[index]}} -->
+        <!-- <view wx:if="{{isState}}" style='font-size:30rpx;margin-top:10rpx'>{{array[index]}}</view> -->
+        <view wx:if="{{isState}}">
+          <text style='font-size:26rpx;margin-top:10rpx;color:#666;'>{{array[index]}} </text>
+          <image style="width:20rpx;height:10rpx;margin-top:30rpx" src='../../img/down.png'></image>
+        </view>
+      </view>
+    </picker>
+  </view>
+  <view>
+    <picker mode="date" value="{{date}}" start="2018-01-01" end="2020-01-01" bindchange="bindDateChange">
+      <view class="picker">
+        <view wx:if="{{!isDate}}">
+          <text style='font-size:26rpx'>时间 </text>
+          <image style="width:20rpx;height:10rpx;margin-top:30rpx" src='../../img/down.png'></image>
+        </view>
+        <view wx:if="{{isDate}}" style="display:flex">
+          <view style='font-size:30rpx;margin-top:10rpx;color:#666;margin-right:8rpx'>{{date}} </view>
+          <image style="width:20rpx;height:10rpx;margin-top:30rpx" src='../../img/down.png'></image>
+        </view>
+
+      </view>
+    </picker>
+
+  </view>
+  <view>
+    <icon type="search" size="16" style='position:relative;left:350rpx;top:14rpx' bindtap='searchName' />
+    <input class='search' placeholder="请输入任务名" bindinput="getVal" bindconfirm="searchName" />
+  </view>
+</view>
+
+<!-- 任务列表 -->
+<view class='listContaiar'>
+  <view wx:for="{{taskList}}" wx:key="index" data-index="{{index}}">
+    <navigator url="../taskDetail/taskDetail?taskid={{item.taskid}}" hover-class='none'>
+      <view class='ListOne'>
+        <view>{{item.taskname}}</view>
+        <view>
+          <image src='../../img/cancal.png' wx:if="{{item.state == 4}}"></image>
+          <image src='../../img/runing.png' catchtap='changeTask' wx:if="{{item.callflag == 1 && item.state != 4}}" data-taskid="{{item.taskid}}" data-callflag="{{item.callflag}}"></image>
+          <image src='../../img/stop.png' catchtap='changeTask' wx:if="{{item.state != 4 && (!item.callflag || item.callflag == 2) }}" data-taskid="{{item.taskid}}" data-callflag="{{item.callflag}}"></image>
+        </view>
+      </view>
+      <view class='listTwo'>
+        <view>
+          <text>客户数 : </text>
+          <text style='color:#9D9D9D'>{{item.finishCallCount}}/{{item.finishCallCount + item.noCallCount}}</text>
+          <progress percent="{{item.finishCallCount/(item.finishCallCount + item.noCallCount) * 100}}" color="#1a1893" stroke-width="4" activeColor="#0475F0" backgroundColor="#ccc" />
+        </view>
+        <view style='display:flex;justify-content:flex-start'>
+          <view style='margin-right:30rpx'>A客户 :
+            <text style='color:#0475F0'>{{item.list[0].count}}个</text>
+          </view>
+          <view>B客户 :
+            <text style='color:#0475F0'>{{item.list[1].count}}个</text>
+          </view>
+        </view>
+        <view>创建时间:
+          <text style='color:#9D9D9D'>{{item.createtime}}</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+  <view wx:if="{{!taskList.length}}">
+    <image src='../../img/noData.png' style='width:45%;height:300rpx;margin-left:28%;margin-top:100rpx'></image>
+  </view>
+</view>

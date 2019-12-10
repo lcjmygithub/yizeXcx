@@ -1,0 +1,33 @@
+<!--pages/upList/index.wxml-->
+<!-- <text>pages/upList/index.wxml</text> -->
+<!-- 提现记录 -->
+<view class='listContainer' wx:if="{{upLists.length}}">
+  <view class='title'>收益明细</view>
+  <!-- <view id="{{item.state == 2 || item.state == 4 ? 'colorBlue' : item.state == 3 ? 'colorred' :''}}" class='listLeft'>  -->
+  <!-- <text id="{{item.state == 2 || item.state == 4 ? 'colorBlue' : item.state == 3 ? 'colorred' :''}}">{{item.remark}}</text> -->
+  <view class='lists'>
+    <!-- <navigator url="../../pages/upDetail/index?cashid={{item.cashid}}" hover-class="navigator-hover" wx:for="{{upLists}}"> -->
+    <view class='list' wx:for="{{upLists}}">
+      <view class='listTop'>
+        <view>{{item.CMPNAME}}
+          <text wx:if="{{item.type == 1}}" style="color:#0084FF;font-size:26rpx">(合伙人收益)</text>
+          <text wx:if="{{item.type == 2}}" style="color:#ff3040;font-size:26rpx">(代理收益)</text>
+        </view>
+        <view>+{{item.money}}元</view>
+      </view>
+      <view class='listBottom'>
+        <view wx:if="{{item.state == 1}}">预计<text style="color:#ff3040">{{item.createtime1}}</text>到账</view>
+        <view wx:if="{{item.state == 2}}" style="color:#0084FF">已到账</view>
+        <view wx:if="{{item.state == 3}}" style="color:#ff3040">已退款</view>
+        <view>{{item.createtime}}</view>
+      </view>
+    </view>
+    <!-- </navigator> -->
+  </view>
+
+</view>
+<view style="height:100vh;background:#fff">
+  <view wx:if="{{!upLists.length}}">
+    <image src='../../img/noList.png' style='width:40%;height:300rpx;margin-left:30%;margin-top:100rpx'></image>
+  </view>
+</view>

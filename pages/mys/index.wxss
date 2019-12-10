@@ -1,0 +1,110 @@
+/* pages/logs/index.wxss */
+Page {
+  background: #f8f8f8;
+}
+.mysCon {
+  /* margin-top : 40px; */
+  padding: 20px 20px 20px 40px;
+  display:flex;
+  background: #fff;
+}
+.mysCon>view:first-child{
+  width:160rpx;
+  height:160rpx;
+  background: #f5f5f5;
+  border-radius: 50%;
+  margin-right:50rpx;
+  overflow: hidden;
+}
+.mysCon > view:last-child{
+  margin-top:10rpx;
+}
+.mysCon > view:last-child > view {
+  margin-bottom:20rpx;
+}
+.mysCon > view:last-child > view:first-child{
+  color:#000;
+  font-weight: bold;
+  font-size:36rpx;
+}
+.mysCon > view:last-child > view:nth-child(2n){
+  color:#333;
+   font-weight: bold;
+  font-size:28rpx;
+}
+.mysCon > view:last-child > view:last-child{
+  color:#666;
+  font-weight: bold;
+  font-size:28rpx;
+}
+.mysCon > view:last-child > view:last-child text {
+  color:#9d9d9d;
+  font-weight: 600;
+}
+.myLists {
+  margin-top:30rpx;
+  background: #fff;
+  padding: 0 20px;
+}
+.myLists .myLis {
+  padding:15px 0;
+    display: flex;
+    justify-content: space-between;
+}
+.myLis {
+  border-bottom:1rpx solid #e9e1ec;
+}
+.myLis:last-child{
+  border:none;
+}
+.myLists image{
+  width:32rpx;
+  height:28rpx;
+  position: relative;
+  left:0rpx;
+}
+.myLis view >text {
+  color:#000;
+  font-size: 30rpx;
+  font-weight: 600;
+}
+.myLis view:last-child{
+  color:#0978f0;
+  font-size: 32rpx;
+  font-weight: bold;
+}
+button::after {
+  border: none;
+}
+button {
+  background-color: #fff;
+}
+button {
+  border-radius:0;
+}
+button {
+/* position:relative; */
+/* display:inline-block; */
+/* margin-left:auto; */
+/* margin-right:auto; */
+padding-left:0px;
+padding-right:0px;
+box-sizing:border-box;
+font-size:30rpx;
+font-weight:600;
+text-align:center;
+text-decoration:none;
+line-height:1;
+border-radius:0px;
+-webkit-tap-highlight-color:transparent;
+overflow:hidden;
+color:#000000;
+display:flex;
+justify-content: space-between;
+width:100%;
+/* background-color:#F8F8F8; */
+}
+.button-hover {
+color:#000;
+background-color:#fff;
+}

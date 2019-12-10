@@ -1,0 +1,43 @@
+/* pages/openPay/index/index.wxss */
+.getPhone {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.4);
+  overflow: auto;
+  z-index: 99;
+  display: block;
+}
+
+.login {
+  background: rgb(255, 255, 255);
+  margin-top:20vh;
+  height: 80vh;
+  width:90%;
+  display: block;
+  border-top-right-radius: 10rpx;
+  border-top-left-radius: 10rpx;
+  padding:5%;
+}
+
+/* .loginText {
+  padding: 60rpx 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.loginText>view {
+  text-align: center;
+  font-size: 26rpx;
+  color: #5b5b5b;
+}
+
+.getPhone button {
+  text-align: center;
+  color: #576b95;
+  width: 100%;
+  border: none;
+  background: #fff;
+} */

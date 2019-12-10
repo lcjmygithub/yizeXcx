@@ -1,0 +1,118 @@
+<!--pages/homePage/homePage.wxml-->
+<wxs src="../../filter/filter.wxs" module="filter" />
+<scroll-view class="container" bindscrolltoupper="upper" upper-threshold="10" lower-threshold="5" bindscrolltolower="lower" enable-back-to-top="true" scroll-into-view="{{toView}}" bindscroll="bindscroll" scroll-top="{{scrollTop}}" scroll-y="true">
+  <!-- <view class="container"> -->
+  <view class="top">
+    <!-- <image src="/img/indexBackground2.png"></image> -->
+    <view class='news' style="z-index:999">实时数据 {{time}}</view>
+  </view>
+  <!--客户数据-->
+  <view class="createTask">
+    <view>
+      <view>
+        <text>{{connectRate}}</text>个</view>
+      <view>外呼总量</view>
+    </view>
+    <view>
+      <view>
+        <text>{{connectNum}}</text>个</view>
+      <view>接通总量</view>
+    </view>
+    <view>
+      <view>
+        <text>{{intentionalCustomer}}</text>个</view>
+      <view>意向客户</view>
+    </view>
+    <view>
+      <view>
+        <text>{{callPercent}}</text>%</view>
+      <view>接通率</view>
+    </view>
+  </view>
+  <view class='imgBox' bindtap='upecharts' style='height:40rpx'>
+    <image class='icon' src="../../img/icon/more.png" wx:if="{{!isEcharts}}"></image>
+    <!-- <cover-view> -->
+      <image class='icon' src="../../img/icon/downmore.png" wx:if="{{isEcharts}}"></image>
+    <!-- </cover-view> -->
+
+  </view>
+
+  <!-- //echarts 图表 -->
+  <view class="{{!isEcharts==0?'echarts':'echarts1'}}">
+    <ec-canvas id='mychart-dom-bar' canvas-id="mychart-bar" ec="{{ ec }}" style='width: 666rpx;height: 555rpx'></ec-canvas>
+  </view>
+  <!-- title -->
+  <view class="callRecord">
+    <view></view>
+    <view>正在进行的任务</view>
+    <view></view>
+  </view>
+
+  <!-- 任务列表 -->
+  <view class='listContaiar'>
+    <view wx:for="{{taskList}}" wx:key="index" data-index="{{index}}" class='taskList'>
+      <navigator url="../taskDetail/taskDetail?taskid={{item.taskid}}" hover-class='none'>
+        <view class='ListOne'>
+          <view>{{item.taskname}}</view>
+          <view>
+            <image src="{{item.callflag==1?'/img/runing.png':'/img/stop.png'}}" catchtap='changeTask' data-flag="{{item.flag}}" data-callflag="{{item.callflag}}" data-taskid='{{item.taskid}}' data-index="{{index}}"></image>
+          </view>
+        </view>
+        <view class='listTwo'>
+          <view>
+            <text>客户数 : </text>
+            <text style='color:#9D9D9D'>{{item.finishCallCount}}/{{item.finishCallCount + item.noCallCount}}</text>
+            <progress percent="{{item.finishCallCount/(item.finishCallCount + item.noCallCount) * 100}}" color="#1a1893" stroke-width="4" activeColor="#0475F0" backgroundColor="#ccc" />
+          </view>
+          <view style='display:flex;justify-content:flex-start'>
+            <view style='margin-right:30rpx'>A客户 :
+              <text style='color:#0475F0'>{{item.list[0].count}}个</text>
+            </view>
+            <view>B客户 :
+              <text style='color:#0475F0'>{{item.list[1].count}}个</text>
+            </view>
+          </view>
+          <view>创建时间:
+            <text style='color:#9D9D9D'>{{item.createtime}}</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+    <view wx:if="{{!taskList.length}}">
+      <image src='../../img/noData.png' style='width:45%;height:300rpx;margin-left:28%;margin-top:100rpx'></image>
+    </view>
+  </view>
+</scroll-view>
+<view class='toast-box' wx:if='{{ifName}}'>
+  <view class='toastbg'></view>
+  <view class='showToast'>
+    <view class='toast-title'>
+      <text>请输入并发数</text>
+    </view>
+    <view class='toast-main'>
+      <view class='toast-input'>
+        <input placeholder='请输入并发数' bindinput='setValues' value="{{setValue}}" data-name='stuEidtName'></input>
+      </view>
+    </view>
+    <view class='toast-button'>
+      <view class='button1'>
+        <button catchtap='cancel'>取消</button>
+      </view>
+      <view class='button2'>
+        <button catchtap='confirm'>确定</button>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="getPhone" wx:if="{{!loginState && isIndex}}">
+  <view class="login">
+    <view class="loginText">
+      <view>未找到一泽的绑定账号,请先</view>
+      <view>授权登入</view>
+    </view>
+    <view class="loginSave">
+      <button open-type="getUserInfo" bindtap="bindGetUserInfo">确定</button>
+      <!-- <button class='pop_btn' open-type="getPhoneNumber"bindgetphonenumber='getPhoneNumber'>确定</button> -->
+    </view>
+  </view>
+</view>

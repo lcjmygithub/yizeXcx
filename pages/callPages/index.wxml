@@ -1,0 +1,159 @@
+<!--pages/callPages/index.wxml-->
+<!-- <wxs src="../../../filter/filter.wxs" module="filter" /> -->
+<wxs src="../../filter/filter.wxs" module="filter" />
+<view class="containerbox data_load " hidden="{{isload}}" style="margin:10rpx">
+  <view class="information" style='margin-bottom:2px solid #f8f8f9;margin-bottom:30rpx'>
+    <view class="informationList">
+      <text style="float:left;position: absolute;margin-top:2rpx">任务名:</text>
+      <text id="taskName" style="margin-left:74rpx">{{gadNews.taskname}}</text>
+    </view>
+    <view class="informationList">
+      <text>通话ID:</text>
+      <text id="saleId">{{gadNews.saleid}}</text>
+    </view>
+    <view class="informationList">
+      <text>客户姓名:</text>
+      <text id="customerName">{{gadNews.customername}}</text>
+    </view>
+    <view class="informationList">
+      <text>客户电话:</text>
+      <text id="customerviewhone" bindtap='callphone' data-phone="{{gadNews.mobilephone}}" style="color:#0475f0;padding-left:10px;font-size: 26rpx;font-weight:700">{{gadNews.mobilephone}}    </text>
+      <text class="phoneCopy" bindtap='phoneCopy'>复制</text>
+      <!-- <text class="phoneCopy" bindtap='phoneCopy'>复制</text> -->
+    </view>
+    <view class="informationList">
+      <text>通话日期:</text>
+      <text id="time" wx:if="{{gadNews.calltime}}">{{gadNews.connecttime}} 通话{{gadNews.calltime}}秒</text>
+      <text id="time" wx:if="{{!gadNews.calltime}}">{{gadNews.connecttime}} 未接通</text>
+    </view>
+
+  </view>
+  <view class="aiclassification">
+    <!-- <view class="aiclassificationNum">{{saveIclevelAi}}</view> -->
+    <view class='informationList' style="border-top:1rpx solid #f5f7f9;padding-top:30rpx">
+      <text style="float:left">分类:</text>
+      <text style="color:#0475f0;text-align: left;display:inline-block">{{gadNews.iclevelname}}</text>
+    </view>
+    <view class='informationList' style='overflow:hidden'>
+      <text style="float:left;margin-right:10rpx;padding-left:0rpx">关键词:</text>
+      <text class="saveIclevel" style="display:inline-block;padding:0 5rpx;font-size:26rpx" wx:for="{{question}}"> {{item.focus}} </text>
+    </view>
+    <view style='display:flex;flex-wrap:wrap;font-size:26rpx;justify-content:flex-start' class='informationList'>
+      <view style='color:#666;font-weight:bold;margin-right:10rpx'>命中问题库:</view>
+      <view wx:for="{{question}}" wx:key="index" style='color:#999;font-weight:bold;padding:0 5rpx'> {{index+1}},{{item.question}}; </view>
+    </view>
+    <view style='line-height:40rpx;background:#f8f8f9;' class='informationList'>
+      <image src='../../img/callList.png' style='width:20rpx;height:22rpx;padding:0 10rpx 0 10rpx'></image>
+      <text class='callTitle'>通话记录</text>
+    </view>
+  </view>
+
+  <!-- 通话记录 -->
+  <view class='callListCon'>
+    <view class='audioDetail' style='display:flex;margin:10rpx 0' wx:if="{{robotList.length}}">
+      <!-- <view>
+        <image src='../../img/openAudio.png' bindtap='start' hidden='{{!pauseState}}' style='padding:10rpx'></image>
+        <image src='../../img/closeAudio.png' bindtap='pause' hidden='{{pauseState}}' style='padding:10rpx'></image>
+      </view>
+      <view style='display:flex'>
+        <text style='margin-top:10rpx'>{{pass_time}}</text>
+        <progress style="width:430rpx;margin:0 20rpx" percent="{{(value/max) * 100}}" active color="#007add" stroke-width="4" active-mode="forwards" />
+        <!-- <view class='slider_bg' data-value='{{value}}' data-max='{{max}}' data-percent='{{(value/max) * 100}}'>
+          <wxzx-slider id='wxzxSlider' blockSrc='../../img/slider.png' blockImageWidth='54' blockImageHeight='54' value='{{value}}' max='{{max}}' percent='{{(value/max) * 100}}' width='400' bind:sliderTap="sliderTap" bind:sliderStart="sliderStart" bind:sliderChange="sliderChange"
+            bind:sliderEnd="sliderEnd" bind:sliderCancel="sliderCancel" slider-left='75' disabled='{{disabled}}'></wxzx-slider> -->
+        <!-- </view> -->
+        
+        <!-- <text style='margin-top:10rpx'>{{audioSize}}</text>
+      </view> --> 
+
+
+
+
+      <view class="audio" >
+            <view class="audioLeft">
+              <view class="audioButton">
+                <image src='../../img/openAudio.png' bindtap='start' hidden='{{!pauseState}}'></image>
+                <image src='../../img/closeAudio.png' bindtap='pause' hidden='{{pauseState}}'></image>
+              </view>
+              <view class='time_view'>
+                <view>{{pass_time}}</view>
+                
+              </view>
+              <view class='slider_bg' data-value='{{value}}' data-max='{{max}}' data-percent='{{percent}}'>
+                <wxzx-slider id='wxzxSlider' blockSrc='../../img/slider.png' blockImageWidth='54' blockImageHeight='54' value='{{value}}' max='{{max}}' percent='{{percent}}' width='400' bind:sliderTap="sliderTap" bind:sliderStart="sliderStart" bind:sliderChange="sliderChange" bind:sliderEnd="sliderEnd" bind:sliderCancel="sliderCancel" slider-left='75' disabled='{{disabled}}'></wxzx-slider>  
+              </view>
+              <view class="time_view">
+                <view style="padding-left:22rpx;">{{audioSize}}</view>
+              </view>
+              
+            </view>
+            
+          </view>
+
+    </view>
+    <view class='chatList'>
+      <view wx:for="{{robotList}}" :key="{{index}}">
+        <view class="defalt {{item.ifornotrobot == 1 ? 'robat' : 'gad'}}" wx:if="{{item.storagetext}}">
+          <view class='boxCon'>
+            <view class='imgBox'>
+              <image src='/img/yxlogo.png' wx:if="{{item.ifornotrobot == 1}}"></image>
+            </view>
+            <view class='chatContent'>
+              <view class="{{item.ifornotrobot == 2 ? 'contentDetail' : ''}}">{{item.storagetext}}</view>
+              <!-- <view class="{{item.ifornotrobot == 2 ? 'contentDetail' : ''}}">3242354365465758-4832-44823-403258034853406584607546097502324354657654444444444444444444444444444444444444444444444444444444444</view> -->
+              <view wx:if="{{item.ifornotrobot == 2}}" style='display:flex'>
+                <view style='margin-right:10rpx;padding-left:30rpx;color：#000' class="clickPlay">{{item.size}}</view>
+                <view style='width:30rpx;height:40rpx;margin-top:5rpx' data-yy="{{partPrefixAudio}}{{item.storagevoice}}" data-index="{{index}}" data-playState="{{item.playState}}" bindtap='yyPlay'>
+                  <image src="{{item.playState ? '/img/playd.gif' :'/img/closeCon.png'}}" style='width:100%;height:100%'></image>
+                </view>
+              </view>
+            </view>
+
+          </view>
+          <view class='chatTime' wx:if="{{item.ifornotrobot == 1}}">机器人 {{filter.dateFormat(item.createtime)}}</view>
+          <view class='chatTime' wx:if="{{item.ifornotrobot == 2}}">客户 {{filter.dateFormat(item.createtime)}}</view>
+          <view class="messageTipsdiv  clearfix" wx:if="{{item.ifornotrobot==2}}">
+
+            <view class="messageTips" wx:if="{{item.type==1}}">匹配到态度 : {{item.showcontent}}</view>
+            <view class="messageTips" wx:elif="{{item.type==2}}">匹配到全局 : {{item.showcontent}}</view>
+            <view class="messageTips" wx:elif="{{item.type==3}}">匹配到问题库 : {{item.showcontent}}</view>
+            <view class="messageTips" wx:elif="{{item.type==4&&item.num==1}}">
+              匹配到打断忽略
+            </view>
+            <view class="messageTips" wx:elif="{{item.type==4&&item.num==2}}">
+              匹配到no_input后流程继续
+            </view>
+            <view class="messageTips" wx:elif="{{item.type==4&&item.num==3}}">
+              匹配到no_word后流程继续
+            </view>
+            <view class="messageTips" wx:elif="{{item.type==4&&item.num==4}}">
+              匹配到问题库之后流程继续
+            </view>
+            <view class="messageTips" wx:elif="{{item.type==4&&item.num==5}}">
+              匹配到问题库跳转
+            </view>
+
+            <view class="messageTips" wx:else> 未匹配到流程继续 !</view>
+          </view>
+        </view>
+      </view>
+      <view style="background:#fff">
+        <view wx:if="{{!robotList.length}}">
+          <image src='../../img/noList.png' style='width:40%;height:300rpx;margin-left:30%;margin-top:100rpx'></image>
+        </view>
+      </view>
+      <!-- <view class='defalt gad'>
+        <view class=''>
+          <view class='imgBox'>
+          </view>
+          <view class='chatContent'>
+            <view>嗯,可以贷多少钱?</view>
+            <view>点击播放</view>
+          </view>
+        </view>
+        <view class='chatTime'>客户 2018/12/14 14:10</view>
+      </view> -->
+
+    </view>
+  </view>
+</view>

@@ -1,0 +1,37 @@
+/* pages/upList/index.wxss */
+Page {
+  background: #f5f5f5;
+}
+.listContainer {
+  /* padding:0 30rpx; */
+}
+.title {
+  color:#6c6c6c;
+  font-size:28rpx;
+  font-weight: bold;
+  line-height: 60rpx;
+   padding:0 30rpx;
+}
+.lists {
+  background: #fff;
+   padding:0 30rpx;
+}
+.list {
+  /* display:flex; */
+  line-height: 90rpx;
+  border-bottom:2rpx solid #f5f5f5;
+  font-size:32rpx;
+}
+.listTop {
+  display:flex;
+  justify-content: space-between;
+  color:#4f4f4f;
+}
+.listTop>view:last-child{
+  color:#ff3040;
+}
+.listBottom {
+  display:flex;
+  justify-content: space-between;
+  color:#999;
+}

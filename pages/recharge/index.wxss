@@ -1,0 +1,118 @@
+/* pages/recharge/index.wxss */
+
+Page {
+  background: #f5f5f5;
+}
+
+.topCon {
+  background: #fff;
+  margin-top: 20rpx;
+  padding: 30rpx 40rpx;
+  display: flex;
+  justify-content: space-around;
+}
+
+.topCon view {
+  width: 300rpx;
+  text-align: center;
+  /* border-bottom:2rpx solid #ccc; */
+}
+
+.topCon>view>view:last-child {
+  width: 300rpx;
+  height: 6rpx;
+  background: #0084ff;
+  margin-top: 30rpx;
+}
+
+.topCon image {
+  width: 35rpx;
+  height: 30rpx;
+  margin-right:10rpx;
+}
+
+.chongzhi {
+  background: #fff;
+  padding: 30rpx 40rpx;
+}
+
+.chongzhi view:first-child {
+  font-size: 30rpx;
+  color: #666;
+  font-weight: bold;
+}
+
+.chongzhi view:nth-child(2) {
+  margin-top: 50rpx;
+  text-align: center;
+  font-size:34rpx;
+  font-weight: 600;
+}
+.chongzhi .last{
+  text-align: center;
+  margin-top:20rpx;
+  color:#9d9d9d;
+  /* font-weight: 600; */
+  font-size: 28rpx;
+}
+
+.chongzhi input {
+  display: inline-block;
+  border-bottom:2rpx solid #eee;
+  padding:40rpx 50rpx 20rpx;
+  line-height: 30rpx;
+  font-size:30rpx;
+  color:#333;
+}
+.buttons {
+  margin-top:40rpx;
+  line-height: 110rpx;
+  background: #fff;
+  text-align: center;
+  width:80%;
+  margin-left:10%;
+  color:#fff;
+  background: #268aed;
+  font-size:34rpx;
+  font-weight: 600;
+}
+.blankCard {
+  text-align: center;
+  background: #fff;
+  margin-top:30rpx;
+}
+.blankCard view {
+  line-height: 100rpx;
+  font-size:26rpx;
+  color:#666;
+  font-weight: bold;
+  display:flex;
+  justify-content: space-around;
+}
+.blankCard .title {
+  color:#000;
+  font-size:30rpx;
+  font-weight: 600;
+  line-height: 100rpx;
+}
+.blankCard view input {
+  display: inline-block;
+  color:#333;
+  font-weight: normal;
+  font-size:26rpx;
+  margin-top:25rpx;
+}
+.blankCard image {
+  width:42rpx;
+  height:28rpx;
+  margin-top:25rpx;
+}
+.fixed {
+  font-size:24rpx;
+  color:#9d9d9d;
+  position:fixed;
+  bottom:10rpx;
+  width: 72%;
+  margin-left:14%;
+  font-weight: bold;
+}

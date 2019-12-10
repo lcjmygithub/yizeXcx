@@ -1,0 +1,30 @@
+<!--pages/upList/index.wxml-->
+<!-- <text>pages/upList/index.wxml</text> -->
+<!-- 提现记录 -->
+<view class='listContainer' wx:if="{{upLists.length}}">
+  <view class='title'>提现记录</view>
+  <!-- <view id="{{item.state == 2 || item.state == 4 ? 'colorBlue' : item.state == 3 ? 'colorred' :''}}" class='listLeft'>  -->
+  <!-- <text id="{{item.state == 2 || item.state == 4 ? 'colorBlue' : item.state == 3 ? 'colorred' :''}}">{{item.remark}}</text> -->
+  <view class='lists'>
+    <navigator url="../../pages/upDetail/index?cashid={{item.cashid}}" wx:for="{{upLists}}">
+      <view class='list'>
+        <view id="{{item.state == 3 ? 'colorred' :''}}" class='listLeft'>
+          <text wx:if="{{item.state == 4}}" style='font-size:35rpx;margin-right:18rpx;font-weight:600'>+</text>
+          <text wx:else>-</text>
+          <text>{{item.money}}.00</text>
+          <text>元</text>
+        </view>
+        <view class='listRight'>
+          <text id="{{item.state == 3 ? 'colorred' :''}}">{{item.remark}}</text>
+          <image src='../../img/arrow_right3.png'></image>
+        </view>
+      </view>
+    </navigator>
+  </view>
+
+</view>
+<view style="height:100vh;background:#fff;padding-top:60rpx" wx:if="{{!teamLists.length}}">
+  <view wx:if="{{!upLists.length}}">
+    <image src='../../img/noList.png' style='width:40%;height:300rpx;margin-left:30%;margin-top:100rpx'></image>
+  </view>
+</view>

@@ -1,0 +1,7 @@
+<!--pages/openPay/index/index.wxml-->
+<text>pages/openPay/index/index.wxml</text>
+<view class="getPhone">
+  <view class="login">
+    <view style="font-size:32rpx;font-weight:700;border-bottom:1rpx solid #ccc;padding-bottom:30rpx">一泽机器人套餐( 689 <text style="font-size:24rpx">元/台</text>)</view>
+  </view>
+</view>

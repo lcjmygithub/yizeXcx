@@ -1,0 +1,922 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"coverView": true,
+		"autoAudits": false,
+		"checkInvalidKey": true,
+		"checkSiteMap": true,
+		"uploadWithSourceMap": true,
+		"babelSetting": {
+			"ignore": [],
+			"disablePlugins": [],
+			"outputPath": ""
+		}
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.8.0",
+	"appid": "wx5a063f0fd6ced47a",
+	"projectname": "yizeWx",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 128,
+			"list": [
+				{
+					"id": 0,
+					"name": "任务",
+					"pathName": "pages/task/task",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "任务详情",
+					"pathName": "pages/taskDetail/taskDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/mys/index",
+					"query": ""
+				},
+				{
+					"id": 3,
+					"name": "通话记录",
+					"pathName": "pages/callPages/index",
+					"query": ""
+				},
+				{
+					"id": 4,
+					"name": "合伙人",
+					"pathName": "pages/partner/index",
+					"query": ""
+				},
+				{
+					"id": 5,
+					"name": "收益",
+					"pathName": "pages/myearnings/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "充值",
+					"pathName": "pages/recharge/index",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "提现记录",
+					"pathName": "pages/upList/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "提现详情",
+					"pathName": "pages/upDetail/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的团队",
+					"pathName": "pages/myTeam/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的团队",
+					"pathName": "pages/myTeam/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的团队",
+					"pathName": "pages/myTeam/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的团队",
+					"pathName": "pages/myTeam/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "通话详情",
+					"pathName": "pages/callPages/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "erweima",
+					"pathName": "pages/erweima/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "提现详情",
+					"pathName": "pages/earningDetail/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "团队",
+					"pathName": "pages/myTeam/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "充值",
+					"pathName": "pages/recharge/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "充值",
+					"pathName": "pages/recharge/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "加入合伙人",
+					"pathName": "pages/joinPeople/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "成为合伙人",
+					"pathName": "pages/joinPeople/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "合伙人",
+					"pathName": "pages/partner/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "erweima",
+					"pathName": "pages/erweima/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "任务",
+					"pathName": "pages/task/task",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "二维码",
+					"pathName": "pages/erweima/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "erweima",
+					"pathName": "pages/erweima/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "二维码",
+					"pathName": "pages/erweima/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "二维码",
+					"pathName": "pages/myTeam/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "erweima",
+					"pathName": "pages/erweima/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "erweima",
+					"pathName": "pages/erweima/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "充值",
+					"pathName": "pages/recharge/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "erweima",
+					"pathName": "pages/erweima/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "erweima",
+					"pathName": "pages/erweima/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "erweima",
+					"pathName": "pages/erweima/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "二维码",
+					"pathName": "pages/erweima/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "任务",
+					"pathName": "pages/task/task",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myTeam/index",
+					"pathName": "pages/myTeam/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/callPages/index",
+					"pathName": "pages/callPages/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/upList/index",
+					"pathName": "pages/upList/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/upList/index",
+					"pathName": "pages/upList/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myearnings/index",
+					"pathName": "pages/myearnings/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/earningDetail/index",
+					"pathName": "pages/earningDetail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/callPages/index",
+					"pathName": "pages/callPages/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/joinPeople/index",
+					"pathName": "pages/joinPeople/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/upList/index",
+					"pathName": "pages/upList/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/joinPeople/index",
+					"pathName": "pages/mys/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/joinPeople/index",
+					"pathName": "pages/joinPeople/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/joinPeople/index",
+					"pathName": "pages/joinPeople/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/joinPeople/index",
+					"pathName": "pages/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/joinPeople/index",
+					"pathName": "pages/joinPeople/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/taskDetail/taskDetail",
+					"pathName": "pages/taskDetail/taskDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/index",
+					"pathName": "pages/partner/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/earningDetail/index",
+					"pathName": "pages/earningDetail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/earningDetail/index",
+					"pathName": "pages/earningDetail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mys/index",
+					"pathName": "pages/mys/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/linePage/index",
+					"pathName": "pages/linePage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/jionPeople/index",
+					"pathName": "pages/joinPeople/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/linePage/index",
+					"pathName": "pages/linePage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/joinPeople/index",
+					"pathName": "pages/joinPeople/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/joinPeople/index",
+					"pathName": "pages/joinPeople/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/joinPeople/index",
+					"pathName": "pages/joinPeople/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/index",
+					"pathName": "pages/partner/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/recharge/index",
+					"pathName": "pages/recharge/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mys/index",
+					"pathName": "pages/mys/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/linePage/index",
+					"pathName": "pages/linePage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/p",
+					"pathName": "pages/partner/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mys/index",
+					"pathName": "pages/mys/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rechgeMys/index",
+					"pathName": "pages/rechgeMys/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/earningDetail/index",
+					"pathName": "pages/earningDetail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/earningDetail/index",
+					"pathName": "pages/earningDetail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mys/index",
+					"pathName": "pages/mys/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/linePage/index",
+					"pathName": "pages/linePage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rechgeMys/index",
+					"pathName": "pages/rechgeMys/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rechgeMys/index",
+					"pathName": "pages/rechgeMys/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/linePage/index",
+					"pathName": "pages/linePage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/linePage/index",
+					"pathName": "pages/linePage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/linePage/index",
+					"pathName": "pages/linePage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/linePage/index",
+					"pathName": "pages/linePage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/linePage/index",
+					"pathName": "pages/linePage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/linePage/index",
+					"pathName": "pages/linePage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rechgeMys/index",
+					"pathName": "pages/rechgeMys/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/linePage/index",
+					"pathName": "pages/linePage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/taskDetail/taskDetail",
+					"pathName": "pages/taskDetail/taskDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/callPages/index",
+					"pathName": "pages/callPages/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/callPages/index",
+					"pathName": "pages/callPages/index",
+					"query": "saleid=338619861&cmpid=4765",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/callPages/index",
+					"pathName": "pages/callPages/index",
+					"query": "saleid=338619861&cmpid=4765",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/callPages/index",
+					"pathName": "pages/callPages/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rechgeMys/index",
+					"pathName": "pages/rechgeMys/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rechgeMys/index",
+					"pathName": "pages/rechgeMys/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/linePage/index",
+					"pathName": "pages/linePage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rechgeMys/index",
+					"pathName": "pages/rechgeMys/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/rechgeMys/index",
+					"pathName": "pages/rechgeMys/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/joinPeople/index",
+					"pathName": "pages/joinPeople/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/mys/index",
+					"pathName": "pages/mys/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/joinPeople/index",
+					"pathName": "pages/joinPeople/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/index",
+					"pathName": "pages/partner/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/joinPeople/index",
+					"pathName": "pages/joinPeople/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/upList/index",
+					"pathName": "pages/upList/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/earningDetail/index",
+					"pathName": "pages/earningDetail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/callPages/index",
+					"pathName": "pages/callPages/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/earningDetail/index",
+					"pathName": "pages/earningDetail/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/taskDetail/taskDetail",
+					"pathName": "pages/taskDetail/taskDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/taskDetail/taskDetail",
+					"pathName": "pages/taskDetail/taskDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/taskDetail/taskDetail",
+					"pathName": "pages/taskDetail/taskDetail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/linePage/index",
+					"pathName": "pages/linePage/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/task/task",
+					"pathName": "pages/task/task",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/upList/index",
+					"pathName": "pages/upList/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/upList/index",
+					"pathName": "pages/upList/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/erweima/index",
+					"pathName": "pages/erweima/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/recharge/index",
+					"pathName": "pages/recharge/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/myearnings/index",
+					"pathName": "pages/myearnings/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/partner/index",
+					"pathName": "pages/partner/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/openPay/index/index",
+					"pathName": "pages/openPay/index/index",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "pages/openPay/index/index",
+					"pathName": "pages/openPay/index/index",
+					"scene": null
+				}
+			]
+		}
+	}
+}

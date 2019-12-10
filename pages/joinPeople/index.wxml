@@ -1,0 +1,71 @@
+<!--pages/joinPeople/index.wxml-->
+<!-- <text>pages/joinPeople/index.wxml</text> -->
+<view class='title'>
+  <view class='title1'>一泽智能电话机器人</view>
+  <view class='title2'>全国火爆招募合伙---万亿市场，等您来分</view>
+</view>
+<view class='content'>
+  <view class='tiTle'>尊敬的一泽用户:</view>
+  <view class='p1'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text> 您好，首先我们真诚的感谢您对“一泽”一直以来的信任与支持，在众多的品牌中，选择了我们，我们将一如既往的秉承“向传统外呼行业注入人工智能”的宗旨，通过领先的NLP技术为全球用户提供更优质的智能营销体验，以及进一步采用前沿的大数据和AI技术，解决传统电销效率低下、人工成本高、员工不稳定的痛点，帮助企业降本增效。</view>
+  <view class='p2'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>出于市场对电销机器人需求日益加大和对自身产品自信以及让更多人得到实惠的情况下，“一泽”决定推出合伙人计划，走“分享经济”这条路，共同开启AI财富之道。我们期待各位合伙人的加入！
+    <!-- <text>“一泽”提供了一个新的创业思路，现全国招募合伙人，采用深层次、灵活的二级分销合作模式，所谓的二级分销就是分销商ABC的模式，A发展B，B发展C，C就是A的二级分销商。</text>而这个佣金分配的规则是按照分销商的不同层级关系来分的，不同的等级具备的佣金比例是不一样的，就好比一级分销商可获得的佣金为20%，二级分销商的佣金为5%。 -->
+  </view>
+     <view class='p3'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    <text>[合伙人加入条件]：</text>凡购买一泽电话机器人（机器人+话费套餐的月度/季度合作）套餐的用户，即可成为公司的渠道合作商。
+  </view>
+  <view class='p3'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    <text>[二级分销模式]：</text>“一泽”合伙人计划采用的是深层次、灵活的二级分销合作模式。所谓的二级分销就是合伙人ABC的模式，A发展B，B发展C，C就是A的二级合伙人。而这个佣金分配的规则是按照合伙人的不同层级关系来分的，不同的等级具备的佣金比例是不一样的，就好比一级合伙人可获得的佣金为30%，二级合伙人的佣金为5%。
+  </view>
+  <view><image src="/img/fenxiaoImg.png" style="width:640rpx;height:256rpx;margin: 30rpx  30rpx 15rpx 30rpx"></image></view>
+
+   <view class='p3'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    <text>[收益核算规则]：</text>“一泽”的合作方式、零售价格和提成的规则如下图所示：
+  </view>
+  <view><image src="/img/table.png" style="width:640rpx;height:350rpx;margin: 30rpx 30rpx 15rpx 30rpx"></image></view>
+    <view class='p3'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    <text>[注明]：</text>成为公司的渠道合作商，可享受公司授权此用户具有电话机器人渠道拓展的权限，同时履行渠道合作商的义务和责任。
+  </view>
+     <view class='p3'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>
+    <text>[合伙人规则]：</text>任何渠道合伙人必须严格按照公司制定的市场价格统一销售，不得以任何活动或者非活动形式降低或者抬高公司的价格，若是有发现用户投诉，直接取消合伙人资格。
+  </view>
+  <view class='p4'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>1.任何渠道合伙人在销售产品过程中，必须严格按照一泽系统的实际拨打数，系统的功能以及线路的实际情况销售产品，不能夸大其词，过分的超出公司产品的属性的不良行为销售产品，若是有发现此行为的直接取消合伙人资格，合伙人自己承担客户直接或者间接的损失。
+  </view>
+    <view class='p4'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>2.合伙人在销售产品过程中，自己不得以任何形式，线上转发/红包或者线下收取现金的方式收取用户的款项，必须由用户自己通过扫描一泽用户注册码，方可生效，账户采用一号一码制度。若渠道商在拓展客户过程中同一个用户，若是有第二个账户在其他渠道商开的户，则属于他人，账户采用一号一码制度。
+  </view>
+
+  <view class='p4'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>3.合伙人针对推广全国的客户，合伙人具有独立运营和管理自己用户的责任和义务。
+  </view>
+    <view class='p4'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>4.合伙人在拓展客户的过程中又遇到已经被注册的用户，公司以最先拓展此用户为准，若是有疑义，则可以咨询官方客服。
+  </view>
+    <view class='p4'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>5.为了能够进一步提高合伙人的竞争力企业也会定期对二级合伙人进行培训指导，让合伙人可以提高产品的销量，获得更高的佣金。 
+  </view>
+    <view class='p4'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>6.渠道商发展的客户若是在当月因为纠纷问题导致客户的退款，根据退款的对应的比例扣除对应的提成，若是渠道商的账户因为用户退款导致余额不够扣除的，则从下一个累计的用户扣除。
+  </view>
+    <view class='p4'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>7.一泽科技AI电弧机器人主要用户金融贷款行业，所有渠道商必须合规合法的销售公司产品，不得将此产品用户诈骗，淫秽，保健品等非法行业。
+  </view>
+    <view class='p4'>
+    <text decode="{{true}}" space="{{true}}">&nbsp;&nbsp;&nbsp;&nbsp;</text>我们“一泽”诚挚邀请您加入我们的合伙人推广计划，享受佣金回报高、积分累计、推荐好友有返利提成等多项福利，而您只需将高品质商品分享推荐给他人，收获他人的感谢的同时，挣得属于自己的利润。
+  </view>
+</view>
+<view class='section'>
+  姓名:
+  <input placeholder="请输入姓名" bindinput='name'/> 电话:
+  <input placeholder="请输入电话" bindinput='telNum' value='{{telNum}}'/>
+</view>
+    <button class="buttons" bindtap="joinTeam" data-index="4" form-type='submit'>
+      我要申请加入
+    </button>

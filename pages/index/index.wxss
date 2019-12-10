@@ -1,0 +1,303 @@
+/* pages/homePage/homePage.wxss */
+
+/* .container{
+  position: relative;
+} */
+
+.container {
+  background: #fff;
+}
+
+scroll-view.container {
+  min-height: 100%;
+}
+
+.top {
+  display: flex;
+  justify-content: center;
+  margin-top: -120rpx;
+  font-size: 28rpx;
+  font-weight: normal;
+  color: rgba(255, 255, 255, 1);
+  /* border-top:1px solid #1a1893; */
+  width: 100%;
+  /* height:336rpx; */
+  height: 390rpx;
+  background: url("https://spmp.zg118.com/static-resources/indexBackground2.png") no-repeat;
+  background-position-y: -110rpx;
+  background-color: #fff;
+  background-size: 100%;
+}
+.createTask>view>view>text{
+  font-size:36rpx;
+}
+
+.getPhone {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: rgba(0, 0, 0, 0.4);
+  overflow: auto;
+  z-index: 99;
+  display: block;
+}
+
+.login {
+  background: rgb(255, 255, 255);
+  margin: 150px auto auto;
+  height: 280rpx;
+  width: 500rpx;
+  display: block;
+  border-radius: 10rpx;
+}
+
+.loginText {
+  padding: 60rpx 0;
+  border-bottom: 1px solid #e1e1e1;
+}
+
+.loginText>view {
+  text-align: center;
+  font-size: 26rpx;
+  color: #5b5b5b;
+}
+
+.getPhone button {
+  text-align: center;
+  color: #576b95;
+  width: 100%;
+  border: none;
+  background: #fff;
+}
+
+.createTask, .echarts,.echarts1 {
+  height: 240rpx;
+  width: 666rpx;
+  background: #fff;
+  font-size: 24rpx;
+  padding-top: 50rpx;
+  /* padding-left: 40rpx;
+  padding-right: 60rpx; */
+  box-sizing: border-box;
+  margin: -150rpx auto 24rpx;
+  border-radius: 10rpx;
+  box-shadow: 0px 1px 9px 4px rgba(178, 178, 178, 0.24);
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+  color: #888;
+}
+
+.top>view {
+  flex: 1;
+  text-align: center;
+  margin-top: 160rpx;
+}
+
+.echarts {
+  position: relative;
+  margin-top: 0rpx;
+  height: 555rpx;
+  width:666rpx;
+  left:0rpx;
+  top:0;
+}
+.echarts1 {
+  position: absolute;
+  margin-top: 0rpx;
+  height: 555rpx;
+  width:666rpx;
+  left:-700rpx;
+  top:0;
+}
+.createTask view {
+  text-align: center;
+  height: 68rpx;
+}
+
+.createTask view view:first-child {
+  font-size: 25rpx;
+  color: #268aed;
+  /* border-right:1px solid #999; */
+}
+
+.imgBox {
+  display: flex;
+  justify-content: center;
+}
+
+.icon {
+  width: 32rpx;
+  text-align: center;
+  position: relative;
+  top:-86rpx;
+  height: 20rpx;
+  padding:10rpx;
+}
+
+/* 未完外呼 */
+
+.callRecord {
+  margin-top: 30rpx;
+  width: 100%;
+  color: #666;
+  font-size: 28rpx;
+  font-family: PingFang-SC-Bold;
+  padding-left: 24rpx;
+  background: #fff;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.callRecord view:nth-child(2n+1) {
+  width: 150rpx;
+  height: 2rpx;
+  background-color: #ddd;
+  /* margin-right: 16rpx; */
+}
+
+.listContaiar {
+  margin: 40rpx;
+  color: #333;
+  /* padding-bottom:40rpx;
+  border-bottom: 2px solid #F5F5F5; */
+}
+
+.listContaiar .ListOne {
+  display: flex;
+  justify-content: space-between;
+}
+
+.listContaiar .ListOne view:first-child {
+  font-style: PingFang-SC-Bold;
+  font-weight: bold;
+}
+
+.listContaiar .ListOne view:last-child {
+  width: 100rpx;
+  height: 39rpx;
+}
+
+.listContaiar .ListOne view image {
+  width: 100%;
+  height: 100%;
+}
+
+.listTwo {
+  color: #666;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 26rpx;
+}
+
+.listTwo view {
+  padding-top: 10rpx;
+}
+
+.listTwo view:first-child {
+  /* display: flex; */
+}
+
+.listContaiar> .taskList {
+  padding-bottom: 40rpx;
+  border-bottom: 2px solid #f5f5f5;
+  margin-bottom:30rpx;
+}
+
+.listContaiar progress {
+  position: relative;
+  left:270rpx;
+  top:-20rpx;
+  margin-right:270rpx;
+}
+
+.toast-box {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+ 
+.toastbg {
+    opacity: 0.2;
+    background-color: black;
+    position: absolute;
+    width: 100%;
+    min-height: 100vh;
+}
+ 
+.showToast {
+    position: absolute;
+    opacity: 1;
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 40%;
+}
+ 
+.toast-title {
+    padding-left: 5%;
+    background-color: #2196f3;
+    color: white;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    border-top-right-radius: 16rpx;
+    border-top-left-radius: 16rpx;
+}
+ 
+.toast-main {
+    padding-top: 2vh;
+    padding-bottom: 2vh;
+    background-color: white;
+    text-align: center;
+}
+ 
+.toast-input {
+    margin-left: 5%;
+    margin-right: 5%;
+    border: 1px solid #ddd;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}
+ 
+.toast-button {
+    display: flex;
+}
+ 
+.button1 {
+    width: 50%;
+}
+ 
+.button2 {
+    width: 50%;
+}
+ 
+.button1 button {
+    width: 100%;
+    background-color: white;
+    color: red;
+    border-radius: 0px;
+    border-bottom-left-radius: 16rpx;
+    border-right:none;
+}
+ 
+.button2 button{
+    width: 100%;
+    background-color: white;
+    color: black;
+    border-radius: 0px;
+    border-bottom-right-radius: 16rpx;
+}
+ 
+.picker {
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+}

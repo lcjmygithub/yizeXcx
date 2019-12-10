@@ -1,0 +1,122 @@
+/* pages/linePage/index.wxss */
+
+.one {
+  background: #fff;
+  display: flex;
+  justify-content: left;
+  padding: 20rpx;
+  color: #000;
+  border-bottom: 2rpx solid #f5f5f7;
+}
+
+.one view:first-child {
+  width: 8rpx;
+  height: 35rpx;
+  line-height: 75rpx;
+  background: #0475f0;
+  margin-right: 20rpx;
+}
+
+.page-section-spacing {
+  /* display:flex; */
+}
+
+.table {
+  display: inline-block;
+  border: 0px solid darkgray;
+  font-size: 32rpx;
+  color: #444;
+  /* overflow: hidden; */
+  position: relative;
+}
+
+.boleft {
+  width: 40%;
+  float: right;
+  height: 100rpx;
+  text-align: center;
+  line-height: 100rpx;
+}
+
+.borig {
+  width: 60%;
+  float: left;
+  height: 100rpx;
+}
+
+.caozuo {
+  background: rgb(240, 250, 255);
+  display: flex;
+  height: 2.5rem;
+  line-height: 2.5rem;
+  /* text-align: center; */
+  padding-left: 120rpx;
+  /* text-align: center; */
+}
+
+.bian {
+  background: rgb(240, 250, 255);
+  height: 2.5rem;
+  line-height: 2.5rem;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #f5f5f7;
+}
+
+.tr {
+  display: flex;
+  /* overflow: hidden; *//* width: 100%; *//* justify-content: center; */
+  height: 2.5rem;
+  line-height: 2.5rem;
+  align-items: center;
+}
+
+.td {
+  justify-content: center;
+  text-align: center;
+  width: 200rpx;
+    height: 2.5rem;
+  line-height: 2.5rem;
+  flex-shrink: 0;
+  border-bottom: 2rpx solid #f5f5f7;
+}
+
+.bg-w {
+  background: snow;
+  color: #000;
+  font-weight: 500;
+  /* position: fixed; */
+}
+
+.bg-g {
+  background: #f8f8f9;
+}
+
+.th {
+  width: 200rpx;
+  flex-shrink: 0;
+  justify-content: center;
+  background: #ccc;
+  display: flex;
+  /* flex-wrap: wrap; */
+  height: 2.5rem;
+  align-items: center;
+}
+
+.fixedfather {
+  /* float: right; */
+  position: relative;
+}
+
+.fixed {
+  /* float: right; */
+  position: relative;
+  right: 400rpx;
+  /* right:0; */
+}
+
+.fixed1 {
+  position: relative;
+  background: #f5f5f7;
+  right: 400rpx;
+  /* right:0; */
+}

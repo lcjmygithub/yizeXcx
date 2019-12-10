@@ -1,0 +1,59 @@
+<!--pages/recharge/index.wxml-->
+<!-- <text>pages/recharge/index.wxml</text> -->
+<view class='topCon'>
+  <view bindtap='isRecharge'>
+    <image src='../../img/yang.png'></image>
+    <text>充值</text>
+    <view wx:if="{{isRecharges}}"></view>
+  </view>
+  <view bindtap='isRecharge'>
+    <image src='../../img/tixian.png'></image>
+    <text>提现</text>
+    <view wx:if="{{!isRecharges}}"></view>
+  </view>
+</view>
+
+<!-- 充值 -->
+
+<view wx:if="{{isRecharges}}">
+    <view class='chongzhi'>
+      <view>充值金额 : </view>
+      <view> ￥
+        <input placeholder="请输入充值金额" value='{{recharges}}' bindinput='submitUp' placeholder-style="color:#d0d0d0;"/>
+      </view>
+      <view class='last'>当前可用余额 : {{totalMax}}元</view>
+    </view>
+    <button class="active buttons" bindtap="upChange1" data-index="4" form-type='submit'>
+      充值
+    </button>
+</view>
+
+<view wx:if="{{!isRecharges}}">
+    <view class='chongzhi'>
+      <view>提现金额 : </view>
+      <view style='color:#000'> ￥
+        <input placeholder="请输入提现金额" value='{{upMoney}}' bindinput='submitadd' placeholder-style="color:#d0d0d0;"/>
+      </view>
+      <!-- <view>当前可用余额 : 1300元</view> -->
+    </view>
+    <!-- 银行卡信息 -->
+    <view class='blankCard'>
+      <view class='title'>银行卡信息</view>
+      <view>开户姓名 :
+        <input placeholder="请输入开户姓名" value='{{name}}' bindinput='submitName' placeholder-style="color:#d0d0d0;"/>
+        <image src='../../img/reName.png' style='width:30rpx;height:30rpx' bindtap='isModel'></image>
+      </view>
+      <view>银行卡号 :
+        <input placeholder="请输入银行卡号" value='{{card}}' bindinput='submitCard' placeholder-style="color:#d0d0d0;"/>
+        <image src='../../img/reCard.png' style='width:34rpx'></image>
+      </view>
+      <view>开户银行 :
+        <input placeholder="请输入开户银行" value='{{blank}}' bindinput='submitBlank' placeholder-style="color:#d0d0d0;"/>
+        <image src='../../img/reBlank.png'></image>
+      </view>
+    </view>
+    <button class="active buttons" bindtap="upChange2" data-index="1" form-type='submit'>
+      提现
+    </button>
+</view>
+<view class='fixed'>您的银行卡信息已加密,只用于该提现,请放心填写!</view>

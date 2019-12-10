@@ -1,0 +1,94 @@
+/* pages/joinPeople/index.wxs*/
+
+.title {
+  text-align: center;
+  font-weight: 700;
+  margin:0 60rpx;
+  padding-bottom:40rpx;
+  border-bottom:2rpx solid #d0d0d0;
+}
+
+.title1 {
+  font-size: 32rpx;
+  margin-bottom:10rpx;
+}
+
+.title2 {
+  font-size: 24rpx;
+}
+.content{
+  margin:40rpx;
+  padding-bottom:40rpx;
+  border-bottom:2rpx solid #d0d0d0;
+}
+.content .tiTle {
+  font-size:28rpx;
+  font-weight: bold;
+}
+.content .p1 {
+  margin-top:30rpx;
+  font-size:26rpx;
+  line-height: 40rpx;
+}
+.content .p2 {
+  margin-top:30rpx;
+  font-size:26rpx;
+  line-height: 40rpx;
+}
+.content .p2 text {
+  font-size:28rpx;
+  font-weight: bold;
+}
+.content .p3 {
+  margin-top:30rpx;
+  font-size:26rpx;
+  line-height: 40rpx;
+}
+.content .p3 text {
+  font-size:28rpx;
+  font-weight: bold;
+}
+.content .p4 {
+  margin-top:30rpx;
+  font-size:26rpx;
+  line-height: 40rpx;
+}
+.section {
+  display: flex;
+  justify-content: space-around;
+  font-size: 26rpx;
+  margin:40rpx;
+  /* margin-top:40rpx; */
+  font-weight: bold;
+}
+
+.section input {
+  border: 1px solid #ccc;
+  padding-left: 10rpx;
+  margin-top:-3rpx;
+  width:200rpx;
+  border-radius: 10rpx;
+  font-weight: normal;
+}
+
+.section input:first-child {
+  margin-right: 10rpx;
+}
+
+.section input:last-child {
+  margin-left: 10rpx;
+}
+.buttons {
+  margin-top:40rpx;
+  line-height: 80rpx;
+  background: #fff;
+  text-align: center;
+  width:80%;
+  margin-left:10%;
+  color:#fff;
+  background: #268aed;
+  font-size:34rpx;
+  font-weight: 600;
+  margin-bottom: 40rpx;
+}
+
